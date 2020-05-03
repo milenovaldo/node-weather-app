@@ -25,10 +25,20 @@ weatherForm.addEventListener('submit', (e) => {
             }
     
             const location = data.location;
-            const forecast = data.data.weather[0].description;
+            const weatherForecast = data.data.weather[0].description;
+            const tempForecast = data.data.temp;
+            const feelsLikeForecast = data.data.feels_like;
+            const humidityForecast = data.data.humidity;
+            const dewPointForecast = data.data.dew_point;
     
             messageOne.textContent = location;
-            messageTwo.textContent = forecast;
+            messageTwo.textContent = 
+            `Forecasts
+            Weather: ${weatherForecast}
+            Temperature: ${tempForecast} C
+            Feels Like: ${feelsLikeForecast} C
+            Humidity: ${humidityForecast}%
+            Dew Point: ${dewPointForecast}`;
         });
     });
 });
