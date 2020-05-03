@@ -6,6 +6,9 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 
+const hostname = '127.0.0.1';
+const port = process.env.PORT || 3000;
+
 /**
  * Define directories
  */
@@ -130,8 +133,6 @@ app.get('*', (req, res) => {
 //app.com
 //app.com/about
 
-const hostname = '127.0.0.1';
-const port = 3000;
 
 app.listen(port, hostname, () => {
     console.log(`Server running on port http://${hostname}:${port}`);
