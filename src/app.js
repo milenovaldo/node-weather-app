@@ -134,6 +134,6 @@ app.get('*', (req, res) => {
 //app.com/about
 
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
     console.log(`Server running on port http://${hostname}:${port}`);
 });
